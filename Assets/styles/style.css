@@ -3,7 +3,7 @@
     background-size: cover;
     display: grid;
     grid-template-rows: 20% 30% 10% 10%;
-    grid-template-columns: 15% 60% 20%;
+    grid-template-columns: 15% 60% 25%;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
@@ -11,7 +11,7 @@
 }
 
 .logo{
-    font-size: 35px;
+    font-size: 4vh;
     justify-self: start;
 }
 
@@ -43,7 +43,7 @@ a{
 }
 
 .moto{
-    grid-area: 2/ 1/ 3/3;
+    grid-area: 2/ 1/ 3/4;
     font-size: 8vh;
 }
 
@@ -122,11 +122,11 @@ a{
 
 .fake-buttons{
     background-color: #2A97DF;
-    height: 70px;
-    width: 130px;
+    height: 12vh;
+    width: 10vw;
     text-align: center;
     vertical-align: middle;
-    line-height: 70px;
+    line-height: 12vh;
     font-size: larger;
 }
 
@@ -151,7 +151,6 @@ a{
     height: 40vh;
     padding: 19vh 8vw 0 13vh;
     justify-content: space-around;
-
 }
 
 .service-heading{
@@ -182,8 +181,8 @@ a{
 }
 
 .special-offer-image{
-    grid-area: 1/3/5/4;
-    height: 100%;
+    grid-area: 1/3/4/4;
+    max-width: 100%;
 }
 .price{
     font-weight: 600;
@@ -192,15 +191,24 @@ a{
 .spec-text{
     grid-area: 3/1/4/3;
     align-self: flex-start;
+    max-height: 100%;
 }
 
 .footer{
     background-color: #082335;
-    height: 40vh;
-    display: grid;
-    grid-template: 1fr/ 2fr repeat(4, 1fr);
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
     padding:10vh 8vw 0 8vh;
     justify-content: space-between;
+}
+
+.lakoni-footer{
+    max-width: 45vw;
+}
+
+.numbers{
+    display: none;
 }
 
 .font-white-footer{
@@ -217,4 +225,153 @@ a{
 
 .footer li{
     margin-bottom: 10px;
+}
+
+@media(max-width: 450px){
+    .horiz-list{
+        display: none;
+    }
+
+    .header{
+        background-image: linear-gradient(rgba(83, 130, 192, 0.3), rgba(83, 130, 192, 0.3)), url(../images/Header.png);
+        background-size: cover;
+        display: grid;
+        grid-template-rows: 20% 35% 20% 10%;
+        grid-template-columns: 15% auto 50%;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding: 0%;
+    }
+
+    .grid-one{
+        padding: 5% 2%;
+    }
+
+    .about-us{
+        padding: 5% 2%;
+    }
+
+    .our-service{
+        padding: 5% 2%;
+    }
+
+    .special-offer{
+        padding: 5% 2%;
+    }
+
+    .grid-one{
+        display: flex;
+        flex-wrap: wrap;
+        height: 70vh;
+        justify-content: space-between;
+    }
+
+    .little-words{
+        display: none;
+    }
+
+    .images{
+        width: 95%;
+    }
+
+    .about-us{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .beach-img{
+        width: 50vw;
+    }
+
+    .to-right{
+        max-width: 45vw;
+    }
+
+    .our-service{
+        display: none;
+    }
+
+    .fake-buttons{
+        height: 8vh;
+        line-height: 8vh;
+        width: fit-content;
+    }
+
+    .special-offer{
+        display: flex;
+        flex-wrap: wrap;
+        height: 110vh;
+        justify-content: center;
+    }
+
+    .special-offer-image{
+        max-width: 80%;
+    }
+    
+    .footer{
+        padding: 2%;
+    }
+}
+
+@media(min-width:451px) and (max-width:1000px){
+
+    .header{
+        padding-left: 5%;
+    }
+
+    .grid-one{
+        padding: 5% 2%;
+    }
+
+    .about-us{
+        padding: 5% 2%;
+    }
+
+    .our-service{
+        padding: 5% 2%;
+    }
+
+    .special-offer{
+        padding: 5% 2%;
+    }
+
+    .fake-buttons{
+        width: 13vw;
+        height: 7vh;
+        line-height: 7vh;
+    }
+
+    .grid-one{
+        grid-template: 1fr 3fr 3fr/ 30% 30% 30%;
+        height: 70%;
+    }
+
+    .about-us{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .little-words{
+        height: fit-content;
+    }
+
+    .to-right{
+        display: inline;
+        max-width: 70vw;
+    }
+
+    .price{
+        grid-area: 4/1/5/3;
+    }
+
+    .button-booknow{
+        grid-area: 4/3/5/4;
+    }
+
+    .footer{
+        padding:5% 5%;
+        justify-content: start;
+    }
 }
